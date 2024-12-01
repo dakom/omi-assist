@@ -1,0 +1,41 @@
+[package]
+name = "shared"
+version = "0.0.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[dependencies]
+######## General workspace dependencies ########
+serde = {workspace = true} 
+anyhow = {workspace = true} 
+uuid = {workspace = true} 
+wasm-bindgen = {workspace = true}
+thiserror = {workspace = true}
+http = {workspace = true}
+worker = {workspace = true, optional = true}
+serde_json = {workspace = true, optional = true} 
+tracing = {workspace = true}
+tracing-web = {workspace = true}
+tracing-subscriber = {workspace = true}
+time = {workspace = true}
+tracing-panic = {workspace = true}
+
+### Proprietary dependencies
+[dependencies.web-sys]
+version = "0.3.69"
+features = [
+    "Request",
+    "RequestInit",
+    "Response",
+    "ResponseInit",
+    "Url",
+    "Headers"
+]
+
+[features]
+default = []
+frontend = []
+backend = ["dep:worker", "dep:serde_json"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]

@@ -1,0 +1,12 @@
+error-api-unknown = Unknown error
+error-api-unknown-parse = Unknown parsing error
+error-api-missing-body = Missing body 
+error-api-parse-body = Unable to parse body 
+error-api-telegram = Telegram error
+error-api-omi = Omi error
+error-api-not-authorized = Not authorized 
+error-api-omi-id-already-exists = Omi id already exists
+error-api-omi-id-mismatch = Telegram id mismatch 
+error-api-telegram-id-already-exists = Telegram id already exists
+error-api-signin-invalid = Invalid email or password
+error-api-terms-not-agreed = Must agree to terms and privacy policy
